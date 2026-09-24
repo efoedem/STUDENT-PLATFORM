@@ -1,0 +1,13 @@
+REVOKE EXECUTE ON FUNCTION public.update_updated_at_column() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.handle_new_user() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.assign_alias() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.handle_enrolment() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.handle_message() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.record_message_author() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.course_conversation(UUID) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.has_role(UUID, public.app_role) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.is_staff(UUID) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.is_conversation_member(UUID, UUID) FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.has_role(UUID, public.app_role) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.is_staff(UUID) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.is_conversation_member(UUID, UUID) TO authenticated;

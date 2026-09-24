@@ -1,0 +1,10 @@
+REVOKE EXECUTE ON FUNCTION public.update_updated_at_column() FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.handle_new_user() FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.assign_alias() FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.handle_enrolment() FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.handle_message() FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.record_message_author() FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.course_conversation(UUID) FROM anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.has_role(UUID, public.app_role) FROM anon;
+REVOKE EXECUTE ON FUNCTION public.is_staff(UUID) FROM anon;
+REVOKE EXECUTE ON FUNCTION public.is_conversation_member(UUID, UUID) FROM anon;
